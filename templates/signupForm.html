@@ -2,46 +2,28 @@
 {% block content %}
       
         <h1>Signup</h1>
-        <style>
-          .error{ color: red; 
-          }
-
-          body {font-family: Arial, Helvetica, sans-serif;}
-          * {box-sizing: border-box}
-
-          input[type=text], input[type=password] {
-            width: 20%;
-            padding: 10px;
-            margin: 5px 0 22px 0;
-    
-            display: inline-block;
-            background: #f1f1f1;
-            font-size: 15 px
-            }
-
-            input[type=text]:focus, input[type=password]:focus {
-            background-color: #ddd;
-            }
-        </style>
-        
+                
         <form action='/signup' method='post'>
-            <lable>Username
-              <input  type='text' name='username' placeholder='Enter Username' value='{{username}}' />
+          <div>
+            <lable>Username:<br>
+              <input type='text' name='username' placeholder='Enter Username' value='{{username}}' />
             </lable>
             <p class='error'>{{username_error}}</p>            
-            <lable>Password
+            <lable>Password:<br>
               <input type='password' name='password' placeholder="Enter Password" value='{{password}}'/>
             </lable>
             <p class='error'>{{password_error}}</p>
             <p class='error'></p>
-            <lable>Verify Password
-              <input type='password' name='verify' placeholder="Repeat Password" value='{{verify}}' /> 
+            <lable>Verify Password:<br>
+              <input  type='password' name='verify' placeholder="Repeat Password" value='{{verify}}' /> 
             </lable>
             <p class='error'>{{verify_error}}</p>
-            <lable>Email (optional)
+            <lable>Email (optional):<br>
               <input type='text' name='email' placeholder="Enter Email" value='{{email}}' />
             </lable>
             <p class='error'>{{email_error}}</p>
-            <input type='submit' value='Submit Query'/>
+            <input class='button' type='submit' value='Submit Query'/>
+          </div>
         </form>
+
 {% endblock %}
